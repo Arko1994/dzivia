@@ -6,69 +6,91 @@ body {
     margin: 0px;
     padding: 0px;
     background: url(images/background1.jpg) top center no-repeat fixed;
+    background-color: #000;
     background-size: cover;
     overflow: hidden;
+    font-size: 24px;
+    color: white; 
 }
-.menu-layer {
-    display: block;
-    margin: 0 auto;
+.page1 {
+    width: 100%;
+    height: 100%; 
 }
-.ml1 {
-    position: relative;
+.logo {
+    position: absolute;
+    width: 600px;
+    top: 50px;
+    left: 50%;
+    margin-left: -300px;
+    z-index: 11;
+}
+.deermother {
+    position: absolute;
+    width: 600px;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -300px;
+    z-index: 10;   
+}
+.Circle {
     display: block;
-    margin: 0 auto;
-    width: auto;
-    height: 100%;
+    position: absolute;
+    width: 980px;
+    bottom: -35px;
+    left: 50%;
+    margin-left: -490px;
     z-index: 2;
 }
-.ml2 {
-    z-index: 1;
+.ornament {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: auto;
- }
-
-.ml2 {
-   /* -webkit-animation: stars 20s 0s infinite normal cubic-bezier(0.32,0,0.58,1);
-    -moz-animation: stars 20s 0s infinite normal cubic-bezier(0.32,0,0.58,1);
-    -ms-animation: stars 20s 0s infinite normal cubic-bezier(0.32,0,0.58,1);
-    -o-animation: stars 20s 0s infinite normal cubic-bezier(0.32,0,0.58,1);
-    animation: stars 20s 0s infinite normal cubic-bezier(0.32,0,0.58,1);*/
-    
-    animation: stars 100s infinite linear;
+    margin: auto;
+    width: 800px;
+    bottom: 55px;
+    left: 50%;
+    margin-left: -400px;
+    z-index: 9;
 }
-
-.double {
-    animation: stars2 100s infinite linear;
-    animation-delay: 50s;
-    left: -100%;
+.stars {
+    position: absolute;
+    bottom: 0px;
+    height: 100%;
+    animation: stars 200s infinite linear;
 }
-
- @keyframes stars {
+@keyframes stars {
         0% {
-            transform: scale3d(1, 1, 1) rotate(0deg);
-            left: -100%;
+            transform: translateX(0%);
         }
         100% {
-            transform: scale3d(1, 1, 1) rotate(0deg);
-            left: 100%;
+            transform: translateX(100%);
         }
     }
-    
-
- @keyframes stars2 {
+.fogs {
+    z-index: 1;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+ }
+.fog1 {
+    animation: fog 300s infinite linear;
+}
+.fog2 {
+    animation: fog2 300s infinite linear;
+}
+@keyframes fog {
         0% {
-            /*transform: scale3d(1, 1, 1) rotate(0deg);*/
-            left: -100%;
+            transform: translateX(0%);
         }
         100% {
-            /*transform: scale3d(1, 1, 1) rotate(0deg);*/
-            left: 100%;
+            transform: translateX(100%);
         }
-    } 
-
-
-
-
+    }
+@keyframes fog2 {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(0%);
+        }
+    }
